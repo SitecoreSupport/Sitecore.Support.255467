@@ -347,8 +347,10 @@
                 }
 
                 this.QuickRibbon.viewModel.$el.attr("style", "float:right");
-                this.QuickRibbon.viewModel.$el.find("div")
-                    .attr("class", "sprite-speak-ribbon-clean-ee small navigate_down");
+                /*this.QuickRibbon.viewModel.$el.find("div")
+                    .attr("class", "sprite-speak-ribbon-clean-ee small navigate_down");*/
+                this.QuickRibbon.viewModel.$el.find("img")
+                    .attr("src", "/sitecore/shell/client/Speak/Assets/img/Speak/Common/16x16/white/navigate_down.png"); //sitecore.support.255467
 
                 this.on("button:toggleshow",
                     function(denyCollapse) {
@@ -373,13 +375,17 @@
                 }
 
                 if (this.shown) {
-                    this.QuickRibbon.viewModel.$el.find("div")
-                        .attr("class", "sprite-speak-ribbon-clean-ee small navigate_up");
+                    /*this.QuickRibbon.viewModel.$el.find("div")
+                        .attr("class", "sprite-speak-ribbon-clean-ee small navigate_up");*/ //sitecore.support.255467
+                    this.QuickRibbon.viewModel.$el.find("img")
+                        .attr("src", "/sitecore/shell/client/Speak/Assets/img/Speak/Common/16x16/white/navigate_up.png");
                     this.Ribbon.viewModel.$el.show();
                     this.setHeight(this.ScopedEl.height());
                 } else {
-                    this.QuickRibbon.viewModel.$el.find("div")
-                        .attr("class", "sprite-speak-ribbon-clean-ee small navigate_down");
+                    /*this.QuickRibbon.viewModel.$el.find("div")
+                        .attr("class", "sprite-speak-ribbon-clean-ee small navigate_down");*/ //sitecore.support.255467
+                    this.QuickRibbon.viewModel.$el.find("img")
+                        .attr("src", "/sitecore/shell/client/Speak/Assets/img/Speak/Common/16x16/white/navigate_down.png");
                     this.Ribbon.viewModel.$el.hide();
                     this.setHeight(this.ScopedEl.height());
                 }
